@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const { upload } = require('./uploads');
 
-app.post('/api/file', upload.single('file'), function (req, res) {
+app.post('/api/files', upload.single('file'), function (req, res) {
   try {
     return res.status(200).json('ok');
   } catch (error) {
